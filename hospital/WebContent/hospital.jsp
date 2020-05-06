@@ -15,7 +15,7 @@
 		<div class="row">  
 		
 			<div class="col-8">       
-				<h1 class="m-3">hospital Management</h1>        
+				<h1 class="m-3">Hospital Management</h1>        
 				
 				<form id="formhospital" name="formhospital" method="post" action="hospital.jsp">  
 					Hospital Name:  

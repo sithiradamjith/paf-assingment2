@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 06, 2020 at 07:31 AM
+-- Generation Time: May 06, 2020 at 08:41 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.4
 
@@ -24,10 +24,10 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `hospitals`
+-- Table structure for table `hospital`
 --
 
-CREATE TABLE `hospitals` (
+CREATE TABLE `hospital` (
   `hosp_id` int(10) NOT NULL,
   `hosp_name` varchar(50) NOT NULL,
   `phn_no` int(10) NOT NULL,
@@ -37,20 +37,21 @@ CREATE TABLE `hospitals` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `hospitals`
+-- Dumping data for table `hospital`
 --
 
-INSERT INTO `hospitals` (`hosp_id`, `hosp_name`, `phn_no`, `hosp_address`, `hosp_type`, `description`) VALUES
-(18, 'asiri', 312, 'as1323dasdas', 'asdasdasdasddwea', 'ewqdsdweasd');
+INSERT INTO `hospital` (`hosp_id`, `hosp_name`, `phn_no`, `hosp_address`, `hosp_type`, `description`) VALUES
+(21, 'Nawaloka', 11456525, '87/D, Gangaramaya', 'semi government', 'all kind of deseases'),
+(22, 'sethma', 112458745, '90/S, Gampaha.', 'Privert', 'speacial heart patient ');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `hospitals`
+-- Indexes for table `hospital`
 --
-ALTER TABLE `hospitals`
+ALTER TABLE `hospital`
   ADD PRIMARY KEY (`hosp_id`);
 
 --
@@ -58,10 +59,10 @@ ALTER TABLE `hospitals`
 --
 
 --
--- AUTO_INCREMENT for table `hospitals`
+-- AUTO_INCREMENT for table `hospital`
 --
-ALTER TABLE `hospitals`
-  MODIFY `hosp_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+ALTER TABLE `hospital`
+  MODIFY `hosp_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

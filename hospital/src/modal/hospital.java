@@ -13,7 +13,7 @@ public class hospital {
 			Connection con = null;
 			
 			try {
-				 Class.forName("com.mysql.jdbc.Driver");
+				 Class.forName("com.mysql.cj.jdbc.Driver");
 				 //Provide the correct details: DBServer/DBName, username, password 
 				 con= DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/healthcare?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC", "root", "");
 
@@ -69,7 +69,7 @@ public class hospital {
 					  
 					// buttons     
 					  output += "<td><input name='btnUpdate' type='button' value='Update' class='btnUpdate btn btn-secondary'></td>"
-					  		+ "<td><input name='btnRemove' type='button' value='Remove' class='btnRemove btn btn-danger' data-appID='"+ hosp_id +"'>"+"</td></tr>";
+					  		+ "<td><input name='btnRemove' type='button' value='Remove' class='btnRemove btn btn-danger' data-host='"+ hosp_id +"'>"+"</td></tr>";
 
 					} 
 				  
@@ -149,7 +149,7 @@ public class hospital {
 			preparedStmt.setString(3, hosp_address);
 			preparedStmt.setString(4,hosp_type);
 			preparedStmt.setString(5, description);
-			preparedStmt.setInt(10, Integer.parseInt(hosp_id));
+			preparedStmt.setInt(6, Integer.parseInt(hosp_id));
 		   
 		 
 		   // execute the statement    

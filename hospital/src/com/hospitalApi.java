@@ -16,7 +16,7 @@ import modal.hospital;;
 /**
  * Servlet implementation class DoctorAPI
  */
-@WebServlet("/hospitalAPI")
+@WebServlet("/hospitalApi")
 public class hospitalApi extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
