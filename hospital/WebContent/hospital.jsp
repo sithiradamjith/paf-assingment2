@@ -39,7 +39,7 @@
 					 
 					 <br> 
 					 <input id="btnSave" name="btnSave" type="button" value="Save" class="btn btn-primary">  
-					 <input type="hidden" id="hidAppIDSave" name="hidAppIDSave" value=""> 
+					 <input type="hidden" id="hidhospIDSave" name="hidhospIDSave" value=""> 
 					 
 				</form> 
 				
@@ -49,8 +49,8 @@
 				<br>  
 				<div id="divItemsGrid">   
 					<%    
-						hospital appObj = new hospital();
-						out.print(appObj.readhospital());   
+						hospital hospObj = new hospital();
+						out.print(hospObj.readhospital());   
 					%>  
 					
 				</div> 

@@ -26,7 +26,7 @@ $(document).on("click", "#btnSave", function(event)
 	} 
 
 	// If valid------------------------  
-	var t = ($("#hidAppIDSave").val() == "") ? "POST" : "PUT";
+	var t = ($("#hidhospIDSave").val() == "") ? "POST" : "PUT";
 	
 	$.ajax(
 	{
@@ -64,14 +64,14 @@ function onHospitalSaveComplete(response, status){
 		$("#alertError").text("Unknown Error while Saving.");
 		$("#alertError").show();
 	}
-	$("#hidAppIDSave").val("");
+	$("#hidhospIDSave").val("");
 	$("#formhospital")[0].reset();
 }
 
 //UPDATE========================================== 
 $(document).on("click", ".btnUpdate", function(event) 
 		{     
-	$("#hidAppIDSave").val($(this).closest("tr").find('#hidAppIDUpdate').val());     
+	$("#hidhospIDSave").val($(this).closest("tr").find('#hidhospIDUpdate').val());     
 	$("#hosp_name").val($(this).closest("tr").find('td:eq(0)').text());    
 	$("#phn_no").val($(this).closest("tr").find('td:eq(1)').text());     
 	$("#hosp_address").val($(this).closest("tr").find('td:eq(2)').text());     

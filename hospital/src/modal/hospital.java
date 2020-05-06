@@ -60,7 +60,7 @@ public class hospital {
 						String description = rs.getString("description");
 					  // Add into the html table    
 
-					  output += "<tr><td><input id='hidAppIDUpdate' name='hidAppIDUpdate' type='hidden' value='" + hosp_id + "'>" + hosp_name + "</td>"; 
+					  output += "<tr><td><input id='hidhospIDUpdate' name='hidhospIDUpdate' type='hidden' value='" + hosp_id + "'>" + hosp_name + "</td>"; 
 
 					  output += "<td>" + phn_no + "</td>";
 						output += "<td>" + hosp_address + "</td>";

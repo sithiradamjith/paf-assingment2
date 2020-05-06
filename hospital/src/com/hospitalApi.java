@@ -24,7 +24,7 @@ public class hospitalApi extends HttpServlet {
      * @see HttpServlet#HttpServlet()
      */
 	
-	hospital appObj = new hospital();
+	hospital hospObj = new hospital();
 	
     public hospitalApi() {
         super();
@@ -44,7 +44,7 @@ public class hospitalApi extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		String result = appObj.inserthospital(request.getParameter("hosp_name"), 
+		String result = hospObj.inserthospital(request.getParameter("hosp_name"), 
 				request.getParameter("phn_no"), 
 				request.getParameter("hosp_address"), 
 				request.getParameter("hosp_type"), 
@@ -83,7 +83,7 @@ public class hospitalApi extends HttpServlet {
 
 		Map<String, String> param = getParasMap(request);
 		
-		String result = appObj.updatehospital(param.get("hidAppIDSave").toString(),
+		String result = hospObj.updatehospital(param.get("hidhospIDSave").toString(),
 				param.get("hosp_name").toString().toString().replace("+", " "),     
 		 		param.get("phn_no").toString(),        
 		 		param.get("hosp_address").toString().toString().replace("%40", "@"),        
@@ -101,7 +101,7 @@ public class hospitalApi extends HttpServlet {
 
 		Map<String, String> param = getParasMap(request);
 		
-		String result = appObj.deletehospital(param.get("hosp_id").toString());
+		String result = hospObj.deletehospital(param.get("hosp_id").toString());
 		
 		response.getWriter().write(result);
 	}
